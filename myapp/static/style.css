@@ -1,0 +1,20 @@
+.Artist {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.Artist .a1 {
+    border:2px black solid; 
+    margin-right:10px;
+    float:left;
+}
+.Artist .a2 {
+    border:2px black solid; 
+    margin-right:10px;
+    float:left; 
+}
+.Artist .a3 {
+    border:2px black solid; 
+    margin-right:10px;
+    float:left;
+}

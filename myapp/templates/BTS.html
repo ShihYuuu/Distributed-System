@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>
+            BTS
+        </h1>
+        <div style="width:400px;height:100px;">
+            <table>
+                <tr>
+                    <th>Sun.&nbsp&nbsp&nbsp&nbsp</th>
+                    <th>Mon.&nbsp&nbsp&nbsp&nbsp</th>
+                    <th>Tue.&nbsp&nbsp&nbsp&nbsp</th>
+                    <th>Wed.&nbsp&nbsp&nbsp&nbsp</th>
+                    <th>Thr.&nbsp&nbsp&nbsp&nbsp</th>
+                    <th>Fri.&nbsp&nbsp&nbsp&nbsp</th>
+                    <th>Sat.&nbsp&nbsp&nbsp&nbsp</th>
+                </tr>
+                <tr>
+                    <td>01/09<br>18:00</td>
+                    <td>01/10<br>18:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <form method="post"  action="/bookTicket">
+                K-pop:  BTS
+                <div>
+                    <select name="order_session">
+                        <option value="">請選擇場次</option>
+                        <option value="10109">2021/01/09</option>
+                        <option value="10110">2021/01/10</option>
+                    </select>
+                </div>
+                訂購資料：
+                <div>
+                    Name：
+                    <input type="text" name="order_name">
+                    
+                </div>
+                <div>
+                    E-mail：
+                    <input type="text" name="order_mail">
+                </div>
+                <input type="submit" value="submit"></button>
+                
+            </form>
+        </div>
+        <div>
+            <form method="post" action="/home">
+                <button type="submit">BACK</button>
+            </form>
+        </div>
+        
+    </body>
+</html>

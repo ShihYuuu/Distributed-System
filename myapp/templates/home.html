@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <link href="static/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>演唱會購票網</h1>
+        <p>藝人名單</p>
+
+        <div class="Artist">
+            <div class="a1">
+                <form method="post" action="/BTS">
+                    <img src="{{ url_for('static', filename='image/BTS.jpg') }}" style="width:300px;height:300px;"/>
+                    
+                    <div>
+                        <button type="submit" style="width:300px;height:30px;">BTS</button>
+                    </div>
+                </form>
+            </div>
+            <div class="a2">
+                <form method="post" action="/TWICE">
+                    <img src="{{ url_for('static', filename='image/TWICE.jpg') }}" style="width:300px;height:300px;"/>
+                    <div>
+                        <button type="submit" style="width:300px;height:30px;">TWICE</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="a3">
+                <form method="post" action="/BP">
+                    <img src="{{ url_for('static', filename='image/BP.jpg') }}" style="width:300px;height:300px;"/>
+                    <div>
+                        <button type="submit" style="width:300px;height:30px;">Black Pink</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
