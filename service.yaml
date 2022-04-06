@@ -1,0 +1,47 @@
+# web
+apiVersion: v1
+kind: Service
+metadata:
+  name: webservice
+  namespace: k8s
+spec:
+  ports:
+    - name: "8001"
+      port: 8001
+      targetPort: 8001
+  selector:
+    app: webserver
+  type: LoadBalancer
+---
+# database
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbservice
+  namespace: k8s
+spec:
+  clusterIP: 10.111.111.2
+  ports:
+    - name: "8002"
+      port: 8002
+      targetPort: 8002
+  selector:
+    app: dbserver
+  type: ClusterIP
+
+---
+# mail
+apiVersion: v1
+kind: Service
+metadata:
+  name: mailservice
+  namespace: k8s
+spec:
+  # clusterIP:  10.111.111.3
+  ports:
+    - name: "8003"
+      port: 8003
+      targetPort: 8003
+  selector:
+    app: mailserver
+  type: LoadBalancer

@@ -1,0 +1,14 @@
+# my-first-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-pod
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: database
+    image: mastercute/database
+    ports:
+    - containerPort: 8002
+---

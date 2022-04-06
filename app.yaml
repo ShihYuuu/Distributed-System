@@ -1,0 +1,73 @@
+# my-first-pod.yaml
+---
+# Web server
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: webdeploy
+    namespace: k8s
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: webserver
+
+    template:
+        metadata:
+          name: app-pod
+          labels:
+            app: webserver
+        spec:
+          containers:
+          - name: myapp
+            image: mastercute/booking
+            ports:
+            - containerPort: 8001
+---
+# database server
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: dbdeploy
+    namespace: k8s
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: dbserver
+
+    template:
+        metadata:
+          name: db-pod
+          labels:
+            app: dbserver
+        spec:
+          containers:
+          - name: database
+            image: mastercute/database
+            ports:
+            - containerPort: 8002
+---
+# Mail server
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: maildeploy
+    namespace: k8s
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: mailserver
+
+    template:
+        metadata:
+          name: app-pod
+          labels:
+            app: mailserver
+        spec:
+          containers:
+          - name: mail
+            image: mastercute/mail
+            ports:
+            - containerPort: 8003

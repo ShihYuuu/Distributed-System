@@ -1,0 +1,15 @@
+# my-first-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mail-pod
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: mail
+    image: mastercute/mail
+    ports:
+    - containerPort: 8003
+  nodeSelector:
+    hardware: 
