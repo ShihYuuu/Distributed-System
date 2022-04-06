@@ -1,4 +1,4 @@
-# Distributed-System
+# My microservice
 Purpose: Setting a distributed system
 - 
 - Service architecture
